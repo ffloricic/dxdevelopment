@@ -1,0 +1,17 @@
+<p>
+  proba works!
+</p>
+
+<dx-button type="default" [text]=buttonText (onClick)="refreshTextBox($event)" [type]="buttonType"></dx-button>
+<br>
+
+Name:
+<dx-text-box #nameTextBox 
+            showClearButton="true"
+            width="15%"
+            placeholder="Type a text here..."
+            (onInitialized)="saveTextBoxInstance($event)"
+            [(value)]="textBoxValue">
+</dx-text-box>
+<br>
+Name is: {{nameTextBox.value}}
